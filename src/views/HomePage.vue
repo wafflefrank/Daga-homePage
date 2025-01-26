@@ -74,8 +74,8 @@
   </nav>
   <!-- 黑色麵包項目bar -->
   <nav class="navbar navbar-dark bg-dark">
-    <div class="container">
-      <button
+    <div class="container justify-content-center">
+      <!-- <button
         class="navbar-toggler"
         type="button"
         data-bs-toggle="offcanvas"
@@ -83,7 +83,7 @@
         aria-controls="offcanvasMenu"
       >
         <span class="navbar-toggler-icon"></span>
-      </button>
+      </button> -->
       <div class="d-flex">
         <button type="submit" class="my-2 breadRight-button1 mx-3">Đăng nhập</button>
 
@@ -100,7 +100,6 @@
     aria-labelledby="offcanvasMenuLabel"
   >
     <div class="offcanvas-header">
-      <!-- <h5 class="offcanvas-title" id="offcanvasMenuLabel">選單</h5> -->
       <button
         type="button"
         class="btn-close"
@@ -196,7 +195,7 @@
       <span class="visually-hidden">Loading...</span>
     </div>
   </div>
-  <router-view></router-view>
+  <router-view v-if="isRouterAlive"></router-view>
 
   <!-- Start Footer -->
   <footer class="bg-footer pt-4">
@@ -342,6 +341,7 @@ export default {
   data() {
     return {
       input2: '',
+      isRouterAlive: true,
       colorMode: useColorMode().value,
       isBackVisible: false, // 控制backtoTop按鈕顯示與隱藏
       isVisible: true, // 控制 Header 顯示或隱藏
@@ -390,6 +390,38 @@ export default {
       // 更新上一次滾動位置
       this.lastScrollTop = currentScrollTop
     },
+    // 畫面重新整理
+    reloadPage() {
+      this.isRouterAlive = false
+      this.$nextTick(() => {
+        this.isRouterAlive = true
+      })
+    },
+    closeMenu() {
+      const navbarCollapse = document.getElementById('navbarNav')
+      if (navbarCollapse.classList.contains('show')) {
+        // 移除 `show` 樣式，手動收合
+        navbarCollapse.classList.remove('show')
+      }
+    },
+    // closeOffcanvas() {
+    //   const myOffcanvasElement = document.getElementById('offcanvasMenu')
+    //   const backdropElement = document.querySelector('.offcanvas-backdrop')
+
+    //   if (myOffcanvasElement) {
+    //     // 隱藏 Offcanvas
+    //     myOffcanvasElement.classList.remove('show')
+    //     myOffcanvasElement.style.visibility = 'hidden'
+
+    //     // 移除 ARIA 屬性
+    //     myOffcanvasElement.setAttribute('aria-hidden', 'true')
+    //   }
+
+    //   // 如果存在背景遮罩，則移除
+    //   if (backdropElement) {
+    //     backdropElement.remove()
+    //   }
+    // },
     scrollToTop() {
       window.scrollTo({
         top: 0,
@@ -400,25 +432,50 @@ export default {
       this.isBackVisible = window.scrollY > 200 // 滾動超過 200px 顯示按鈕
     },
     goPageOne() {
-      this.$router.push('/page1')
+      this.closeMenu()
+      setTimeout(() => {
+        this.$router.push('/page1')
+      }, 1000) // 與 CSS transition 時間對應
     },
     goPageTwo() {
-      this.$router.push('/page2')
+      this.closeMenu()
+      setTimeout(() => {
+        this.$router.push('/page2')
+      }, 300) // 與 CSS transition 時間對應
     },
     goPageThree() {
-      this.$router.push('/page3')
+      this.closeMenu()
+      // this.closeOffcanvas()
+      setTimeout(() => {
+        this.$router.push('/page3')
+      }, 300) // 與 CSS transition 時間對應
     },
     goPageFour() {
-      this.$router.push('/page4')
+      this.closeMenu()
+      setTimeout(() => {
+        this.$router.push('/page4')
+      }, 300) // 與 CSS transition 時間對應
     },
     goPageFive() {
-      this.$router.push('/page5')
+      this.closeMenu()
+      // this.closeOffcanvas()
+      setTimeout(() => {
+        this.$router.push('/page5')
+      }, 300) // 與 CSS transition 時間對應
     },
     goPageSix() {
-      this.$router.push('/page6')
+      this.closeMenu()
+      // this.closeOffcanvas()
+      setTimeout(() => {
+        this.$router.push('/page6')
+      }, 300) // 與 CSS transition 時間對應
     },
     goPageSeven() {
-      this.$router.push('/page7')
+      this.closeMenu()
+      // this.closeOffcanvas()
+      setTimeout(() => {
+        this.$router.push('/page7')
+      }, 300) // 與 CSS transition 時間對應
     }
   },
   created() {

@@ -6,6 +6,8 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import '@fortawesome/fontawesome-free/css/all.css' // 导入 Font Awesome
 import 'bootstrap/dist/css/bootstrap.min.css'
+// 載入bootstrap全部js功能
+// import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap'
 import Vue3Marquee from 'vue3-marquee' // 跑馬燈
 import ElementPlus from 'element-plus'
