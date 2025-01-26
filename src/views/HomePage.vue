@@ -125,13 +125,19 @@
         </el-input>
       </div>
       <ul class="list-group offcaanvas_list">
-        <li class="list-group-item"><a href="#">Trang Chủ</a></li>
-        <li class="list-group-item hot"><a href="#">Chính Sách Sale Online</a></li>
-        <li class="list-group-item"><a href="#">Giới Thiệu</a></li>
-        <li class="list-group-item hot"><a href="#">Quyền & Lợi Ích</a></li>
-        <li class="list-group-item"><a href="#">Câu Hỏi</a></li>
-        <li class="list-group-item"><a href="#">Hướng Dẫn Đăng Ký</a></li>
-        <li class="list-group-item"><a href="#">Liên Hệ</a></li>
+        <li class="list-group-item"><a @click.prevent="goPageOne()" href="#">Trang Chủ</a></li>
+        <li class="list-group-item hot">
+          <a @click.prevent="goPageTwo()" href="#">Chính Sách Sale Online</a>
+        </li>
+        <li class="list-group-item"><a @click.prevent="goPageThree()" href="#">Giới Thiệu</a></li>
+        <li class="list-group-item hot">
+          <a @click.prevent="goPageFour()" href="#">Quyền & Lợi Ích</a>
+        </li>
+        <li class="list-group-item"><a @click.prevent="goPageFive()" href="#">Câu Hỏi</a></li>
+        <li class="list-group-item">
+          <a @click.prevent="goPageSix()" href="#">Hướng Dẫn Đăng Ký</a>
+        </li>
+        <li class="list-group-item"><a @click.prevent="goPageSeven()" href="#">Liên Hệ</a></li>
       </ul>
     </div>
   </div>
