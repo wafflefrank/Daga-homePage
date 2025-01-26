@@ -16,65 +16,60 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="d-flex align-items-center">
-      <!-- logo -->
-      <img class="logo_style" src="../assets/img/daga/logo.png" alt="" />
-      <!-- 7個連結圖標 -->
-      <div id="navbarNav" class="collapse navbar-collapse msg_style">
-        <ul class="navbar-nav fbLink">
-          <li class="nav-item_fb">
-            <a @click.prevent="goPageOne()" class="nav-link" href="#" target="_blank">
-              <img
-                src="../assets/img/daga/1home.png"
-                class="fbLogo"
-                alt="https://www.facebook.com"
-              />
-              Trang chủ
-            </a>
-          </li>
 
-          <li class="nav-item_fb hot">
-            <a @click.prevent="goPageTwo()" class="nav-link" href="#" target="_blank">
-              <img src="../assets/img/daga/6hoahong.png" class="fbLogo" alt="" />
-              CHÍNH SÁCH SALE ONLINE
-            </a>
-          </li>
+    <!-- logo -->
+    <img class="logo_style" src="../assets/img/daga/logo.png" alt="" />
+    <!-- 7個連結圖標 -->
+    <div id="navbarNav" class="collapse navbar-collapse msg_style">
+      <ul class="navbar-nav fbLink">
+        <li class="nav-item_fb">
+          <a @click.prevent="goPageOne()" class="nav-link" href="#" target="_blank">
+            <img src="../assets/img/daga/1home.png" class="fbLogo" alt="https://www.facebook.com" />
+            Trang chủ
+          </a>
+        </li>
 
-          <li class="nav-item_fb">
-            <a @click.prevent="goPageThree()" class="nav-link" href="#" target="_blank">
-              <img src="../assets/img/daga/2gioithieu.png" class="fbLogo" alt="" />
-              Giới thiệu
-            </a>
-          </li>
-          <li class="nav-item_fb hot">
-            <a @click.prevent="goPageFour()" class="nav-link" href="#" target="_blank">
-              <img src="../assets/img/daga/3loiich.png" class="fbLogo" alt="" />
-              Quyền & Lợi ích
-            </a>
-          </li>
+        <li class="nav-item_fb hot">
+          <a @click.prevent="goPageTwo()" class="nav-link" href="#" target="_blank">
+            <img src="../assets/img/daga/6hoahong.png" class="fbLogo" alt="" />
+            CHÍNH SÁCH SALE ONLINE
+          </a>
+        </li>
 
-          <li class="nav-item_fb">
-            <a @click.prevent="goPageFive()" class="nav-link" href="#" target="_blank">
-              <img src="../assets/img/daga/4cauhoi.png" class="fbLogo" alt="" />
-              Câu hỏi
-            </a>
-          </li>
+        <li class="nav-item_fb">
+          <a @click.prevent="goPageThree()" class="nav-link" href="#" target="_blank">
+            <img src="../assets/img/daga/2gioithieu.png" class="fbLogo" alt="" />
+            Giới thiệu
+          </a>
+        </li>
+        <li class="nav-item_fb hot">
+          <a @click.prevent="goPageFour()" class="nav-link" href="#" target="_blank">
+            <img src="../assets/img/daga/3loiich.png" class="fbLogo" alt="" />
+            Quyền & Lợi ích
+          </a>
+        </li>
 
-          <li class="nav-item_fb">
-            <a @click.prevent="goPageSix()" class="nav-link" href="#" target="_blank">
-              <img src="../assets/img/daga/5dangky.png" class="fbLogo" alt="" />
-              Hướng dẫn đăng ký
-            </a>
-          </li>
+        <li class="nav-item_fb">
+          <a @click.prevent="goPageFive()" class="nav-link" href="#" target="_blank">
+            <img src="../assets/img/daga/4cauhoi.png" class="fbLogo" alt="" />
+            Câu hỏi
+          </a>
+        </li>
 
-          <li class="nav-item_fb">
-            <a @click.prevent="goPageSeven()" class="nav-link" href="#" target="_blank">
-              <img src="../assets/img/daga/lienn-he.png" class="fbLogo" alt="" />
-              Liên hệ
-            </a>
-          </li>
-        </ul>
-      </div>
+        <li class="nav-item_fb">
+          <a @click.prevent="goPageSix()" class="nav-link" href="#" target="_blank">
+            <img src="../assets/img/daga/5dangky.png" class="fbLogo" alt="" />
+            Hướng dẫn đăng ký
+          </a>
+        </li>
+
+        <li class="nav-item_fb">
+          <a @click.prevent="goPageSeven()" class="nav-link" href="#" target="_blank">
+            <img src="../assets/img/daga/lienn-he.png" class="fbLogo" alt="" />
+            Liên hệ
+          </a>
+        </li>
+      </ul>
     </div>
   </nav>
   <!-- 黑色麵包項目bar -->
