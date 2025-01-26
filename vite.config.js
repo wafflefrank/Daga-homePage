@@ -17,7 +17,7 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  base: '/rosa-homePage/', // 將 <REPO_NAME> 替換為你的 GitHub repository 名稱
+  base: '/Daga-homePage/', // 將 <REPO_NAME> 替換為你的 GitHub repository 名稱
   build: {
     chunkSizeWarningLimit: 1000, // 根據需要調整這個值
     rollupOptions: {
